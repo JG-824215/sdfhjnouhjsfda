@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png"> <!--adding the favicon to the page-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Election Calgary Online - User Dashboard</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .header {
+            background-color: #d53131;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2, h3 {
+            color: #333;
+        }
+        section {
+            margin-bottom: 20px;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+        
+        .vote-button, button {
+            background-color: #b8b8b8; 
+            border: none;
+            color: rgb(0, 0, 0);
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .vote-button:hover, button:hover {
+            background-color: #555555;
+            color: #ffffff;
+            
+        }
+
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        .logout-link {
+            display: block;
+            margin-top: 20px;
+            text-align: right;
+            padding-right: 20px;
+        }
+        footer {
+            background-color: #555555;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+
+
+    <!--This is the Javascript that used to define the logout function-->
+    <script>
+        function confirmLogout() {
+            if (confirm("Do you really want to log out?")) {
+                window.location.href = '/logout'; // URL to trigger logout
+            }
+        }
+        </script>
+        
+
+</head>
+<body>
+    <div class="header">
+        <h1>Election Calgary Online - User Dashboard</h1>
+    </div>
+
+    <div class="container">
+        <h2>Hello {username}. Welcome to your Dashboard</h2>
+
+        <section id="current-polls">
+            <h3>Current Polls</h3>
+            <!-- [Placeholder for current polls] -->
+            <button onclick="window.location.href=window.location.origin + '/Vote.html'">Go to Vote</button>
+            <button onclick="window.location.href=window.location.origin + '/Result.html'">Display Result</button>
+            <!-- Admin Button Placeholder -->
+        </section>
+        <!--
+        <section id="voting-history">
+            <h3>Voting History</h3>
+             [Placeholder for voting history]       
+        </section>
+        -->
+
+
+        <!-- Additional sections... -->
+
+        <div class="logout-link">
+            <button onclick="window.location.href='Home.html'">Home</button>
+            <button onclick="confirmLogout()">Logout</button>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Election Calgary Online
