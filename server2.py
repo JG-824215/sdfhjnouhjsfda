@@ -8,7 +8,7 @@ import secrets
 import http.cookies
 
 # Define the IP and port as varible
-HOST = "localhost"
+HOST = "0.0.0.0"
 PORT = 8000
 
 class Block:
